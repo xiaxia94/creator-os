@@ -54,6 +54,13 @@
 - 新增文件大小和命名规范
 - 新增快速截图检查清单
 
+### 4. 用户指南创建
+
+- 新增 USER_GUIDE.md — 面向新用户的完整使用指南
+- 更新 README.md — 添加快速开始指引
+- 更新 SKILL.md — 添加新用户引导流程
+- 改进用户体验文档
+
 ---
 
 ## 二、当前 Creator OS 已实现功能
@@ -181,9 +188,10 @@
 
 | 项目 | 状态 |
 |------|------|
-| README.md | ✅ 创作者友好，已更新 |
+| README.md | ✅ 创作者友好，已更新，添加快速开始 |
 | README.zh-CN.md | ✅ 已同步 |
-| SKILL.md | ✅ 自然语言流程，已更新 |
+| USER_GUIDE.md | ✅ 新用户完整指南 |
+| SKILL.md | ✅ 自然语言流程，已更新，添加新用户引导 |
 | 其他适配器 | ✅ 已同步 |
 | PROJECT_STATUS.md | ✅ 本文件，已更新 |
 | core/topic.js | ✅ 含 batch 命令 + i18n + markPublished 修复 |
