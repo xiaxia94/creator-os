@@ -64,7 +64,15 @@ If you already have Claude Code installed:
    - Open Claude Code
    - Paste your ideas, AI will automatically process them
 
-### Option 2: Cursor
+### Option 2: Codex
+
+If you use Codex:
+
+1. Download and extract the project
+2. Open Codex, load the project folder
+3. Paste your ideas in Codex, AI will process them
+
+### Option 3: Cursor
 
 If you use Cursor:
 
@@ -72,7 +80,7 @@ If you use Cursor:
 2. Open Cursor, load the project folder
 3. Paste your ideas in Cursor, AI will process them
 
-### Option 3: Other AI Assistants
+### Option 4: Other AI Assistants
 
 Any AI assistant that supports Skills/Agents:
 
@@ -89,9 +97,9 @@ Any AI assistant that supports Skills/Agents:
 Tell Creator OS who you are:
 
 ```
-I'm an AI career growth creator.
+I'm an AI creator.
 Main platforms: Xiaohongshu and YouTube.
-Goal: Build personal IP.
+Goal: Build personal influence.
 ```
 
 Creator OS will remember your profile forever.
@@ -101,22 +109,18 @@ Creator OS will remember your profile forever.
 Just paste your ideas to AI:
 
 ```
-Claude Code is way better than Cursor for complex projects.
 AI weekly report automation saved me 2 hours per week.
 Biggest mistake when meeting overseas clients: not confirming timezone.
 Why most people give up learning AI: no immediate ROI.
-My biggest win from building websites wasn't the code.
 ```
 
 Or paste a full memo:
 
 ```
 Today's thoughts:
-* Claude Code is way better than Cursor
 * AI weekly report automation
 * Overseas client meeting pitfalls
 * Why people give up on AI learning
-* My website building lessons
 ```
 
 ---
@@ -163,12 +167,12 @@ Today's thoughts:
 
 **You input:**
 ```
-I'm an AI career growth creator, main platforms are Xiaohongshu and YouTube, goal is to build personal IP.
+I'm an AI creator, main platforms are Xiaohongshu and YouTube, goal is to build personal influence.
 
 Today's thoughts:
-* Claude Code is way better than Cursor
 * AI weekly report automation saves 2 hours
 * Overseas client meetings need timezone confirmation
+* Why most people give up learning AI
 ```
 
 **AI responds:**
@@ -177,20 +181,20 @@ Today's thoughts:
 
 📥 Processed 3 topics:
 
-1. "Claude Code vs Cursor: Why I Switched"
-   Viral 85 / Brand 70 / Business 60 / Competition 45
+1. "AI Weekly Report: From 2 Hours to 15 Minutes"
+   Viral 75 / Brand 65 / Business 70 / Competition 50
    Recommend: This week
 
-2. "AI Weekly Report: From 2 Hours to 15 Minutes"
-   Viral 75 / Brand 65 / Business 70 / Competition 50
+2. "5 Pitfalls in Overseas Client Meetings"
+   Viral 60 / Brand 80 / Business 55 / Competition 40
    Recommend: Next week
 
-3. "5 Pitfalls in Overseas Client Meetings"
-   Viral 60 / Brand 80 / Business 55 / Competition 40
+3. "Why 90% of People Give Up Learning AI"
+   Viral 80 / Brand 75 / Business 50 / Competition 60
    Recommend: Anytime
 
-🔥 Best pick: "Claude Code vs Cursor"
-Reason: AI tools content has high search volume, and you have real experience
+🔥 Best pick: "AI Weekly Report Automation"
+Reason: High practical value, saves real time for creators
 
 📊 Dashboard updated, open preview.html to view
 ```
