@@ -2,6 +2,8 @@
 
 > 🎯 这是一份面向新用户的完整使用指南
 
+[English](USER_GUIDE.en.md) | [中文](USER_GUIDE.md)
+
 ---
 
 ## 🚀 5 分钟快速开始
