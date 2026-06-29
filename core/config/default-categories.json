@@ -1,0 +1,13 @@
+{
+  "categories": [
+    { "id": "ai-tools", "name": "AI工具测评", "nameEn": "AI Tools Review", "emoji": "🤖", "description": "AI工具的使用体验、对比评测、功能介绍", "descriptionEn": "AI tool reviews, comparisons, and feature introductions" },
+    { "id": "ai-workflow", "name": "AI工作流", "nameEn": "AI Workflow", "emoji": "⚡", "description": "用AI提升工作效率的方法、流程、自动化", "descriptionEn": "Methods, processes, and automation for boosting productivity with AI" },
+    { "id": "career-growth", "name": "运营成长", "nameEn": "Career Growth", "emoji": "📈", "description": "运营经验、职业发展、管理心得", "descriptionEn": "Operations experience, career development, and management insights" },
+    { "id": "overseas-marketing", "name": "海外运营", "nameEn": "Overseas Marketing", "emoji": "🌏", "description": "海外市场、跨文化运营、出海策略", "descriptionEn": "Overseas markets, cross-cultural operations, and global expansion strategies" },
+    { "id": "tech-to-marketing", "name": "理工转运营", "nameEn": "Tech to Marketing", "emoji": "🔄", "description": "理工科背景转行运营的经历、方法论", "descriptionEn": "Experiences and methodologies for transitioning from engineering to marketing" },
+    { "id": "personal-brand", "name": "个人品牌", "nameEn": "Personal Brand", "emoji": "✨", "description": "个人IP打造、内容策略、粉丝运营", "descriptionEn": "Personal IP building, content strategy, and fan engagement" },
+    { "id": "industry-insight", "name": "行业洞察", "nameEn": "Industry Insight", "emoji": "💡", "description": "行业趋势、市场分析、竞品观察", "descriptionEn": "Industry trends, market analysis, and competitive intelligence" },
+    { "id": "life-upgrade", "name": "AI生活升级", "nameEn": "AI Life Upgrade", "emoji": "🚀", "description": "用AI改善生活效率、学习、健康", "descriptionEn": "Using AI to improve life efficiency, learning, and health" },
+    { "id": "other", "name": "其他", "nameEn": "Other", "emoji": "📌", "description": "不属于以上分类", "descriptionEn": "Does not fit into the above categories" }
+  ]
+}

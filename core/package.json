@@ -1,0 +1,12 @@
+{
+  "name": "media-topic-core",
+  "version": "1.0.0",
+  "description": "媒体选题助手核心 CLI 工具",
+  "type": "module",
+  "bin": {
+    "topic": "./topic.js"
+  },
+  "scripts": {
+    "topic": "node topic.js"
+  }
+}

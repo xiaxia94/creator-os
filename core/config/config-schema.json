@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "language": {
+      "type": "string",
+      "enum": ["zh", "en"],
+      "default": "zh",
+      "description": "交互语言"
+    },
+    "persona": {
+      "type": "string",
+      "description": "用户人设描述"
+    },
+    "defaultPlatforms": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["xiaohongshu", "youtube", "x", "bilibili"]
+      },
+      "description": "主要发布平台"
+    },
+    "autoClassify": {
+      "type": "boolean",
+      "default": true,
+      "description": "记录时是否自动分类"
+    },
+    "fanMilestones": {
+      "type": "object",
+      "properties": {
+        "bilibili": { "$ref": "#/$defs/milestone" },
+        "youtube": { "$ref": "#/$defs/milestone" },
+        "xiaohongshu": { "$ref": "#/$defs/milestone" },
+        "x": { "$ref": "#/$defs/milestone" }
+      },
+      "description": "各平台粉丝里程碑"
+    },
+    "categories": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "emoji": { "type": "string" },
+          "description": { "type": "string" }
+        },
+        "required": ["id", "name", "emoji"]
+      },
+      "description": "自定义分类（null=使用默认）"
+    },
+    "onboardingComplete": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": ["language", "persona", "defaultPlatforms", "autoClassify", "fanMilestones", "onboardingComplete"],
+  "$defs": {
+    "milestone": {
+      "type": "object",
+      "properties": {
+        "current": { "type": "integer", "minimum": 0 },
+        "targets": { "type": "array", "items": { "type": "integer", "minimum": 0 } }
+      },
+      "required": ["current", "targets"]
+    }
+  }
+}
