@@ -8,16 +8,16 @@ Creator OS is an AI-powered content management system. Just paste your ideas, an
 
 ---
 
-## 🚀 快速开始（新用户必读）
+## 🚀 Quick Start (New Users)
 
-### 5 分钟上手
+### Get Started in 5 Minutes
 
-1. **下载项目** → 点击绿色 `Code` 按钮 → `Download ZIP` → 解压
-2. **告诉 AI 你是谁** → 说"我是 AI 职场成长类创作者，主做小红书和 YouTube"
-3. **粘贴灵感** → 直接粘贴你的想法，AI 自动处理
-4. **查看看板** → 打开 `preview.html` 查看可视化结果
+1. **Download** → Click green `Code` button → `Download ZIP` → Extract
+2. **Tell AI who you are** → Say "I'm an AI creator, main platforms are Xiaohongshu and YouTube"
+3. **Paste ideas** → Share your thoughts, AI processes automatically
+4. **View dashboard** → Open `preview.html` to see results
 
-**就这么简单！** 详细说明请查看 [USER_GUIDE.md](USER_GUIDE.md)
+**That's it!** See [USER_GUIDE.md](USER_GUIDE.md) for details.
 
 ---
 
