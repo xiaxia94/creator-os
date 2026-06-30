@@ -201,10 +201,12 @@ creator-os/
 │   ├── prompts/              # AI prompt templates
 │   └── config/               # Configuration files
 │
+├── .codex/skills/            # Codex native Skill (auto-discovered)
+│   └── creator-os/SKILL.md
+│
 ├── adapters/                 # Platform adapters
 │   ├── claude-code/SKILL.md
 │   ├── cursor/.cursorrules
-│   ├── codex/system-prompt.md
 │   └── generic/AGENT.md
 │
 ├── examples/                 # Example files

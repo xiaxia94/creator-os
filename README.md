@@ -61,15 +61,10 @@ If you already have Claude Code installed:
 If you use Codex:
 
 1. Download and extract the project
-2. **Launch with write permissions**:
-   - **Windows**: Double-click `start-codex.bat`
-   - **macOS/Linux**:
-     ```bash
-     chmod +x start-codex.sh && ./start-codex.sh
-     ```
-3. Paste your ideas, AI will process them
+2. Open the project directory in Codex
+3. Type `/creator-os` or just say "use Creator OS"
 
-> 💡 Codex runs in read-only mode by default. The launch script enables write access. Data is saved in the project's `data/` directory.
+> 💡 The project includes a built-in Codex Skill (`.codex/skills/creator-os/`). Codex auto-discovers and loads it. Data is saved in the project's `data/` directory.
 
 ### Option 3: Cursor
 
@@ -262,10 +257,12 @@ creator-os/
 │   ├── prompts/              # AI prompt templates
 │   └── config/               # Configuration files
 │
+├── .codex/skills/            # Codex native Skill (auto-discovered)
+│   └── creator-os/SKILL.md
+│
 ├── adapters/                 # Platform adapters
 │   ├── claude-code/SKILL.md
 │   ├── cursor/.cursorrules
-│   ├── codex/system-prompt.md
 │   └── generic/AGENT.md
 │
 ├── examples/                 # Example files

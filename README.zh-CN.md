@@ -61,15 +61,10 @@ Creator OS 是一个 **AI 内容助手**，它能帮你：
 如果你使用 Codex：
 
 1. 下载项目并解压
-2. **以写入权限启动**：
-   - **Windows**：双击 `start-codex.bat`
-   - **macOS/Linux**：
-     ```bash
-     chmod +x start-codex.sh && ./start-codex.sh
-     ```
-3. 在 Codex 中输入灵感，AI 会自动处理
+2. 用 Codex 打开项目目录
+3. 输入 `/creator-os` 或直接说"用 Creator OS"
 
-> 💡 Codex 默认是只读模式，需要通过启动脚本开启写入权限。数据会自动保存在项目内的 `data/` 目录。
+> 💡 项目内置 Codex Skill（`.codex/skills/creator-os/`），Codex 会自动发现并加载。数据保存在项目内的 `data/` 目录。
 
 ### 方式三：Cursor
 
@@ -291,10 +286,12 @@ creator-os/
 │   ├── prompts/              # AI 提示词模板
 │   └── config/               # 配置文件
 │
+├── .codex/skills/            # Codex 原生 Skill（自动发现）
+│   └── creator-os/SKILL.md
+│
 ├── adapters/                 # 各平台适配器
 │   ├── claude-code/SKILL.md
 │   ├── cursor/.cursorrules
-│   ├── codex/system-prompt.md
 │   └── generic/AGENT.md
 │
 ├── examples/                 # 示例文件

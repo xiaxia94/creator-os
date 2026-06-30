@@ -60,18 +60,17 @@
 
 根据你使用的 AI 助手，选择对应的适配器文件：
 
-| AI 助手 | 适配器文件 |
-|---------|-----------|
-| Claude Code | `adapters/claude-code/SKILL.md` |
-| Cursor | `adapters/cursor/.cursorrules` |
-| Codex | `adapters/codex/system-prompt.md` |
-| 其他 | `adapters/generic/AGENT.md` |
+| AI 助手 | 使用方式 |
+|---------|---------|
+| Claude Code | 打开项目目录，直接使用 |
+| Cursor | 打开项目目录，直接使用 |
+| Codex | 打开项目目录，输入 `/creator-os` |
+| 其他 | 将 `adapters/generic/AGENT.md` 内容复制到你的 AI 助手 |
 
 **第 3 步：开始使用**
 
-1. 将适配器内容复制到你的 AI 助手中
-2. 输入你的灵感
-3. AI 会自动处理并回复结果
+1. 输入你的灵感
+2. AI 会自动处理并回复结果
 
 ---
 
