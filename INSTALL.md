@@ -113,14 +113,15 @@
 
 ### Q: 我的数据保存在哪里？
 
-数据保存在你的电脑上：
-- Windows: `C:\Users\你的用户名\.media-topic-skill\`
-- Mac: `/Users/你的用户名/.media-topic-skill/`
-- Linux: `/home/你的用户名/.media-topic-skill/`
+数据自动保存在可写位置：
+- 默认：`C:\Users\你的用户名\.media-topic-skill\`（Windows）或 `~/.media-topic-skill/`（Mac/Linux）
+- 如果主目录不可写，自动切换到项目内的 `data/` 目录
+
+运行 `node core/topic.js config` 可查看当前数据目录。
 
 ### Q: 如何备份数据？
 
-直接复制 `.media-topic-skill` 文件夹即可。
+直接复制数据目录文件夹即可。
 
 ### Q: 如何更新到新版本？
 

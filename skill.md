@@ -142,7 +142,7 @@ Today's thoughts:
 🔥 Best pick: "Claude Code vs Cursor"
 Reason: AI tools content has high search volume, and you have real experience
 
-📊 Dashboard updated, open preview.html to view
+📊 Dashboard updated: <data-dir>/preview.html
 ```
 
 ---
@@ -178,17 +178,17 @@ You can switch interface language in the dashboard, but content keeps its origin
 
 ## Data Location
 
-Creator OS data is saved on your computer:
+Creator OS auto-detects a writable location for your data:
 
 ```
-Your user directory/.media-topic-skill/
+~/.media-topic-skill/  or  <project>/data/
 ├── topics.json      # Topic database
 ├── config.json      # Your config and profile
 ├── inbox-log.md     # Input history
 └── preview.html     # Generated dashboard
 ```
 
-**Backup suggestion:** Regularly backup the `.media-topic-skill` folder
+**Backup suggestion:** Regularly backup the data folder
 
 ---
 

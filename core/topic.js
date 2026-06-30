@@ -16,18 +16,40 @@
  *   config / set-config     Configuration
  */
 
-import { readFileSync, writeFileSync, existsSync, mkdirSync, appendFileSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, appendFileSync, unlinkSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { homedir } from 'os';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-// 支持通过环境变量指定数据目录（用于 Codex 等沙盒环境）
-// 默认: ~/.media-topic-skill/
-const DATA_DIR = process.env.CREATOR_OS_DATA_DIR
-  ? join(process.env.CREATOR_OS_DATA_DIR)
-  : join(homedir(), '.media-topic-skill');
+// 自动检测可写数据目录（开箱即用，无需手动配置权限）
+function resolveDataDir() {
+  // 1. 环境变量优先（显式覆盖）
+  if (process.env.CREATOR_OS_DATA_DIR) {
+    const dir = join(process.env.CREATOR_OS_DATA_DIR);
+    try { mkdirSync(dir, { recursive: true }); return dir; } catch {}
+  }
+  // 2. 用户主目录（最通用，~/.media-topic-skill/）
+  const home = join(homedir(), '.media-topic-skill');
+  try {
+    mkdirSync(home, { recursive: true });
+    const testFile = join(home, '.write-test');
+    writeFileSync(testFile, 'x');
+    unlinkSync(testFile);
+    return home;
+  } catch {}
+  // 3. 项目内 data/ 目录（Codex 沙盒等无法写入主目录的场景）
+  const local = join(__dirname, '..', 'data');
+  try { mkdirSync(local, { recursive: true }); return local; } catch {}
+  // 4. 兜底返回主目录（后续操作会报清晰错误）
+  return home;
+}
+const DATA_DIR = resolveDataDir();
+// 首次运行时显示数据目录（帮助用户定位）
+if (!process.env.CREATOR_OS_DATA_DIR && DATA_DIR !== join(homedir(), '.media-topic-skill')) {
+  console.log(`📁 数据目录：${DATA_DIR}（主目录不可写，已自动切换）`);
+}
 const TOPICS_FILE = join(DATA_DIR, 'topics.json');
 const CONFIG_FILE = join(DATA_DIR, 'config.json');
 const INBOX_FILE = join(DATA_DIR, 'inbox-log.md');
@@ -337,7 +359,7 @@ function cmdBatch(jsonStr) {
     merged: result.merged.length,
     profileCreated: result.profileCreated,
     topPick: topPick ? { id: topPick.id, title: topPick.title } : null,
-    dashboard: join(__dirname, '..', 'preview.html'),
+    dashboard: join(DATA_DIR, 'preview.html'),
     savedTopics: result.saved,
     mergedPairs: result.merged
   }, null, 2));
@@ -1386,7 +1408,7 @@ window.markPublished=function(id){
 </body>
 </html>`;
 
-  writeFileSync(join(__dirname, '..', 'preview.html'), html, 'utf-8');
+  writeFileSync(join(DATA_DIR, 'preview.html'), html, 'utf-8');
   console.log(`✅ Creator OS built — ${themeOrder.length} themes, ${data.topics.length} topics`);
 }
 

@@ -47,7 +47,7 @@ AI 会自动回复：
 🔥 最值得发：「Claude Code vs Cursor」
 理由：AI 工具类内容热度高，且你有真实使用经验
 
-📊 看板已更新，打开 preview.html 查看
+📊 看板已更新：~/.media-topic-skill/preview.html
 ```
 
 **完成！** 你现在有了一个完整的选题库和内容看板。
@@ -68,7 +68,7 @@ AI 会自动回复：
 
 ### 查看看板
 
-打开 `preview.html` 文件，查看你的内容看板。
+打开数据目录下的 `preview.html` 文件，查看你的内容看板。
 
 ### 查看选题库
 
@@ -104,7 +104,7 @@ AI 会帮你标记。
 
 ## 看板功能
 
-打开 `preview.html`，你会看到：
+打开看板文件（数据目录下的 `preview.html`），你会看到：
 
 - ✍️ **灵感收件箱** — 最近录入的灵感
 - 🤖 **AI 内容总监** — AI 的内容策略建议
@@ -124,12 +124,11 @@ AI 会帮你标记。
 
 ## 数据位置
 
-你的数据保存在：
-- Windows: `C:\Users\你的用户名\.media-topic-skill\`
-- Mac: `/Users/你的用户名/.media-topic-skill/`
-- Linux: `/home/你的用户名/.media-topic-skill/`
+数据自动保存在可写位置（优先主目录，不可写时自动切换到项目内 `data/`）：
+- 默认：`C:\Users\你的用户名\.media-topic-skill\`（Windows）
+- 备选：项目内的 `data/` 目录
 
-**备份建议：** 定期复制这个文件夹。
+**备份建议：** 定期复制数据文件夹。
 
 ---
 

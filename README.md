@@ -61,16 +61,15 @@ If you already have Claude Code installed:
 If you use Codex:
 
 1. Download and extract the project
-2. **Launch with write permissions** (required for saving data and generating the dashboard):
+2. **Launch with write permissions**:
    - **Windows**: Double-click `start-codex.bat`
    - **macOS/Linux**:
      ```bash
      chmod +x start-codex.sh && ./start-codex.sh
      ```
-   - **Or manually**: `codex -s workspace-write -a on-request`
 3. Paste your ideas, AI will process them
 
-> ⚠️ **Why?** Creator OS needs write access to save your topics and generate the dashboard. Without `-s workspace-write`, Codex blocks file writes by default.
+> 💡 Codex runs in read-only mode by default. The launch script enables write access. Data is saved in the project's `data/` directory.
 
 ### Option 3: Cursor
 
@@ -196,7 +195,7 @@ Today's thoughts:
 🔥 Best pick: "AI Weekly Report Automation"
 Reason: High practical value, saves real time for creators
 
-📊 Dashboard updated, open preview.html to view
+📊 Dashboard updated: ~/.media-topic-skill/preview.html
 ```
 
 ---
@@ -240,17 +239,17 @@ You can switch interface language in the dashboard, but content keeps its origin
 
 ## Data Location
 
-Creator OS data is saved on your computer:
+Creator OS auto-detects a writable location for your data:
 
 ```
-Your user directory/.media-topic-skill/
+~/.media-topic-skill/  or  <project>/data/
 ├── topics.json      # Topic database
 ├── config.json      # Your config and profile
 ├── inbox-log.md     # Input history
 └── preview.html     # Generated dashboard
 ```
 
-**Backup suggestion:** Regularly backup the `.media-topic-skill` folder
+**Backup suggestion:** Regularly backup the data folder
 
 ---
 

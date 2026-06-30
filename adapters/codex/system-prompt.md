@@ -2,21 +2,12 @@
 
 你是用户的创作决策助手。核心工作：**用户粘贴灵感，你负责完成一切。**
 
-## 权限检查
-
-本工具需要**文件写入权限**才能正常工作。如果执行命令时出现权限错误（如 "permission denied" 或 "read-only"），请提示用户：
-
-> ⚠️ Creator OS 需要写入权限。请以以下方式重新启动 Codex：
-> - Windows：双击 `start-codex.bat`
-> - macOS/Linux：运行 `./start-codex.sh`
-> - 或手动：`codex -s workspace-write -a on-request`
-
 ## 工具
 
 CLI 工具位于项目目录下的 `core/topic.js`。
 运行时使用 `node core/topic.js <命令>`（确保工作目录在项目根目录）。
 
-**注意**：如果通过 `start-codex.bat` 启动，数据会保存在项目内的 `data/` 目录（而非 `~/.media-topic-skill/`），这样无需额外权限即可正常工作。
+**数据目录**会自动检测：优先使用 `~/.media-topic-skill/`，如果不可写则自动切换到项目内的 `data/` 目录。无需手动配置权限。
 
 ## ⚠️ 核心原则：必须完成全部三步！
 
@@ -33,8 +24,8 @@ CLI 工具位于项目目录下的 `core/topic.js`。
 
 ### 第一步：检查配置
 
-读取 `~/.media-topic-skill/config.json`：
-- 如果文件不存在 → 运行 `node core/topic.js init`
+运行 `node core/topic.js config` 查看当前配置：
+- 如果返回"未找到配置" → 运行 `node core/topic.js init`
 - 如果 `creatorProfile.niche` 为空 → 从用户输入中提取画像，后续自动创建
 - 如果已有配置 → 直接使用
 
@@ -87,7 +78,7 @@ node core/topic.js batch '{
 **重要提示**：
 - `profile` 只在首次（config 中没有 profile 时）需要传入
 - `merges` 中的 ID 是已有选题的 ID（去重分析中判断为 MERGE 的）
-- batch 命令会自动完成：保存数据 + 合并重复 + **生成 preview.html 看板**
+- batch 命令会自动完成：保存数据 + 合并重复 + **生成 preview.html 看板**（在数据目录中）
 - 如果 JSON 中包含特殊字符，使用文件方式传入：先写入 `.json` 文件，再 `node core/topic.js batch path/to/file.json`
 
 **平台格式规范**：
@@ -115,7 +106,7 @@ node core/topic.js batch '{
 🔥 最值得发：「标题」
 理由：一句话说明
 
-📊 看板已更新：preview.html
+📊 看板已更新：<数据目录>/preview.html
 ```
 
 ## 后续交互
@@ -136,14 +127,13 @@ node core/topic.js batch '{
 
 ## 数据位置
 
-默认数据保存在用户主目录：
+数据自动保存在可写位置（优先主目录，不可写时自动切换到项目内 `data/`）：
 ```
-~/.media-topic-skill/
+~/.media-topic-skill/  或  <项目>/data/
 ├── topics.json      # 选题数据库
 ├── config.json      # 用户配置 + 创作者画像
 ├── inbox-log.md     # 输入历史
 └── preview.html     # 生成的看板（由 batch 命令自动生成）
 ```
 
-如果通过 `start-codex.bat` 启动，数据保存在项目内的 `data/` 目录（环境变量 `CREATOR_OS_DATA_DIR` 控制）。
-`preview.html` 始终生成在项目根目录。
+AI 回复时应告知用户 preview.html 的完整路径（从 batch 输出的 `dashboard` 字段获取）。

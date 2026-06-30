@@ -61,16 +61,15 @@ Creator OS 是一个 **AI 内容助手**，它能帮你：
 如果你使用 Codex：
 
 1. 下载项目并解压
-2. **以写入权限启动**（必须，否则无法保存数据和生成看板）：
+2. **以写入权限启动**：
    - **Windows**：双击 `start-codex.bat`
    - **macOS/Linux**：
      ```bash
      chmod +x start-codex.sh && ./start-codex.sh
      ```
-   - **或手动执行**：`codex -s workspace-write -a on-request`
 3. 在 Codex 中输入灵感，AI 会自动处理
 
-> ⚠️ **为什么需要这样做？** Creator OS 需要写入文件来保存选题和生成看板。Codex 默认是只读模式，必须手动开启写入权限。
+> 💡 Codex 默认是只读模式，需要通过启动脚本开启写入权限。数据会自动保存在项目内的 `data/` 目录。
 
 ### 方式三：Cursor
 
@@ -192,7 +191,7 @@ AI 周报从 2 小时缩短到 15 分钟。
 🔥 最值得发：「AI 周报自动化」
 理由：实用价值高，能真正节省创作者时间
 
-📊 看板已更新，打开 preview.html 查看
+📊 看板已更新：~/.media-topic-skill/preview.html
 ```
 
 ### 场景：日常使用
@@ -269,17 +268,17 @@ Creator OS 会生成一个可视化内容看板，包含：
 
 ## 数据位置
 
-Creator OS 的数据保存在你的电脑上：
+Creator OS 自动检测可写位置保存数据：
 
 ```
-你的用户目录/.media-topic-skill/
+~/.media-topic-skill/  或  <项目>/data/
 ├── topics.json      # 选题数据库
 ├── config.json      # 你的配置和画像
 ├── inbox-log.md     # 输入历史
 └── preview.html     # 生成的看板
 ```
 
-**备份建议：** 定期备份 `.media-topic-skill` 文件夹
+**备份建议：** 定期备份数据文件夹
 
 ---
 

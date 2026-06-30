@@ -15,7 +15,7 @@
 
 用户粘贴灵感时，按以下步骤处理：
 
-1. **检查配置** — 读取 `~/.media-topic-skill/config.json`，不存在则运行 `node core/topic.js init`，profile 为空则从输入中提取
+1. **检查配置** — 运行 `node core/topic.js config` 查看当前配置，不存在则运行 `node core/topic.js init`，profile 为空则从输入中提取
 2. **获取分析 prompt 并自行分析** — 运行 `node core/topic.js ingest "输入"` 获取 prompt（注意：ingest 不保存任何数据！），提取 `--- INGEST_PROMPT_START ---` 和 `--- INGEST_PROMPT_END ---` 之间的内容，按 prompt 完成去重+分类+评分
 3. **批量保存（必须执行！）** — 将分析结果组装为 JSON，调用 `node core/topic.js batch '{"topics":[...],"merges":[...]}'` 保存。batch 会自动完成：保存 + 合并 + **生成 preview.html 看板**
 4. **自然语言回复** — 不暴露命令，只说结果
@@ -30,7 +30,7 @@
 
 🔥 最值得发：「标题」
 
-📊 看板已更新：preview.html
+📊 看板已更新：<数据目录>/preview.html
 ```
 
 ## 评分

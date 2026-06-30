@@ -15,7 +15,7 @@
 
 当用户粘贴灵感/备忘录/想法时：
 
-1. **检查配置** — 读取 `~/.media-topic-skill/config.json`
+1. **检查配置** — 运行 `node core/topic.js config` 查看当前配置
    - 文件不存在 → 运行 `node core/topic.js init`
    - `creatorProfile.niche` 为空 → 从用户输入中提取画像
 2. **获取分析 prompt 并自行分析** — 运行 `node core/topic.js ingest "用户输入"` 获取 prompt（注意：ingest 不保存任何数据！），提取 `--- INGEST_PROMPT_START ---` 和 `--- INGEST_PROMPT_END ---` 之间的内容，按 prompt 完成去重分析、主题分类、四维评分、系列识别
@@ -38,7 +38,7 @@
 🔥 最值得发：「标题」
 理由：...
 
-📊 看板已更新：preview.html
+📊 看板已更新：<数据目录>/preview.html
 ```
 
 ## 评分标准
@@ -70,8 +70,9 @@
 
 ## 数据位置
 
+数据自动保存在可写位置（优先主目录，不可写时自动切换到项目内 `data/`）：
 ```
-~/.media-topic-skill/
+~/.media-topic-skill/  或  <项目>/data/
 ├── topics.json      # 选题数据库
 ├── config.json      # 用户配置
 ├── inbox-log.md     # 输入历史

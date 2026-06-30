@@ -120,11 +120,11 @@ After AI processing, you'll see:
 🔥 Best pick: "AI Weekly Report Automation"
 Reason: High practical value, saves real time for creators
 
-📊 Dashboard updated: preview.html
+📊 Dashboard updated: ~/.media-topic-skill/preview.html
 ```
 
 **Then you can:**
-- Open `preview.html` to view the visual dashboard
+- Open the dashboard file (path shown above) to view the visual dashboard
 - Continue inputting more ideas
 - Ask AI which topic is most worth publishing
 
@@ -201,7 +201,7 @@ Each topic is scored on 4 dimensions (0-100):
 
 ## 📊 Dashboard Features
 
-Open `preview.html`, you'll see:
+Open the dashboard file (`preview.html` in your data directory), you'll see:
 
 1. **✍️ Idea Inbox** — Recent input ideas
 2. **🤖 AI Director** — AI content strategy suggestions
