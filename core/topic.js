@@ -359,7 +359,7 @@ function cmdBatch(jsonStr) {
     merged: result.merged.length,
     profileCreated: result.profileCreated,
     topPick: topPick ? { id: topPick.id, title: topPick.title } : null,
-    dashboard: join(DATA_DIR, 'preview.html'),
+    dashboard: join(__dirname, '..', 'preview.html'),
     savedTopics: result.saved,
     mergedPairs: result.merged
   }, null, 2));
@@ -1451,7 +1451,7 @@ window.unpublish=function(id){
 </body>
 </html>`;
 
-  writeFileSync(join(DATA_DIR, 'preview.html'), html, 'utf-8');
+  writeFileSync(join(__dirname, '..', 'preview.html'), html, 'utf-8');
   console.log(`✅ Creator OS built — ${themeOrder.length} themes, ${data.topics.length} topics`);
 }
 
