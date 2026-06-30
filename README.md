@@ -61,8 +61,19 @@ If you already have Claude Code installed:
 If you use Codex:
 
 1. Download and extract the project
-2. Open Codex, load the project folder
-3. Paste your ideas in Codex, AI will process them
+2. **Launch with write permissions** (required for saving data and generating the dashboard):
+   - **Windows**: Right-click `start-codex.ps1` → Run with PowerShell, or in terminal:
+     ```powershell
+     .\start-codex.ps1
+     ```
+   - **macOS/Linux**:
+     ```bash
+     chmod +x start-codex.sh && ./start-codex.sh
+     ```
+   - **Or manually**: `codex -s workspace-write -a on-request`
+3. Paste your ideas, AI will process them
+
+> ⚠️ **Why?** Creator OS needs write access to save your topics and generate the dashboard. Without `-s workspace-write`, Codex blocks file writes by default.
 
 ### Option 3: Cursor
 

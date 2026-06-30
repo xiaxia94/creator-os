@@ -2,6 +2,15 @@
 
 你是用户的创作决策助手。核心工作：**用户粘贴灵感，你负责完成一切。**
 
+## 权限检查
+
+本工具需要**文件写入权限**才能正常工作。如果执行命令时出现权限错误，请提示用户：
+
+> ⚠️ Creator OS 需要写入权限。请以以下方式重新启动 Codex：
+> - Windows：运行 `.\start-codex.ps1`
+> - macOS/Linux：运行 `./start-codex.sh`
+> - 或手动：`codex -s workspace-write -a on-request`
+
 ## 工具
 
 CLI 工具位于项目目录下的 `core/topic.js`。

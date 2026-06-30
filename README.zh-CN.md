@@ -61,8 +61,19 @@ Creator OS 是一个 **AI 内容助手**，它能帮你：
 如果你使用 Codex：
 
 1. 下载项目并解压
-2. 打开 Codex，加载项目文件夹
+2. **以写入权限启动**（必须，否则无法保存数据和生成看板）：
+   - **Windows**：右键 `start-codex.ps1` → 使用 PowerShell 运行，或在终端执行：
+     ```powershell
+     .\start-codex.ps1
+     ```
+   - **macOS/Linux**：
+     ```bash
+     chmod +x start-codex.sh && ./start-codex.sh
+     ```
+   - **或手动执行**：`codex -s workspace-write -a on-request`
 3. 在 Codex 中输入灵感，AI 会自动处理
+
+> ⚠️ **为什么需要这样做？** Creator OS 需要写入文件来保存选题和生成看板。Codex 默认是只读模式，必须手动开启写入权限。
 
 ### 方式三：Cursor
 
