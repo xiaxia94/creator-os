@@ -12,10 +12,24 @@ Creator OS is an AI-powered content management system. Just paste your ideas, an
 
 ### Get Started in 30 Seconds
 
-1. **Clone** → Tell your AI: `Clone https://github.com/xiaxia94/creator-os and follow the instructions in AGENTS.md to help me manage my content ideas`
-2. **Tell AI who you are** → Say "I'm an AI creator, main platforms are Xiaohongshu and YouTube"
-3. **Paste ideas** → Share your thoughts, AI processes automatically
-4. **View dashboard** → Open `preview.html` to see results
+**Option 1: Clone (Recommended)**
+
+Tell your AI:
+```
+Clone https://github.com/xiaxia94/creator-os and follow the instructions in AGENTS.md to help me manage my content ideas
+```
+
+**Option 2: Download ZIP (If Clone Fails)**
+
+If your AI can't clone the repo (network issues), open in your browser:
+https://github.com/xiaxia94/creator-os
+Click the green `Code` button → `Download ZIP` → Extract to the current workspace. Then tell your AI: "The project is downloaded. Follow the instructions in AGENTS.md to help me manage my content ideas."
+
+**Then:**
+
+1. **Tell AI who you are** → Say "I'm an AI creator, main platforms are Xiaohongshu and YouTube"
+2. **Paste ideas** → Share your thoughts, AI processes automatically
+3. **View dashboard** → Open `preview.html` to see results
 
 **That's it!** See [USER_GUIDE.md](USER_GUIDE.md) for details.
 
