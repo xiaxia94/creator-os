@@ -8,9 +8,9 @@ Creator OS is an AI-powered content management system. Just paste your ideas, an
 
 ---
 
-## 🚀 Quick Start (New Users)
+## 🚀 Quick Start
 
-### Get Started in 30 Seconds
+### Step 1: Get the Project
 
 **Option 1: Clone (Recommended)**
 
@@ -21,17 +21,32 @@ Clone https://github.com/xiaxia94/creator-os and follow the instructions in AGEN
 
 **Option 2: Download ZIP (If Clone Fails)**
 
-If your AI can't clone the repo (network issues), open in your browser:
+If your AI can't clone the repo, open in your browser:
 https://github.com/xiaxia94/creator-os
 Click the green `Code` button → `Download ZIP` → Extract to the current workspace. Then tell your AI: "The project is downloaded. Follow the instructions in AGENTS.md to help me manage my content ideas."
 
-**Then:**
+### Step 2: Tell AI Who You Are (Only Once)
 
-1. **Tell AI who you are** → Say "I'm an AI creator, main platforms are Xiaohongshu and YouTube"
-2. **Paste ideas** → Share your thoughts, AI processes automatically
-3. **View dashboard** → Open `preview.html` to see results
+```
+I'm an AI creator, main platforms are Xiaohongshu and YouTube, goal is to build personal IP.
+```
 
-**That's it!** See [USER_GUIDE.md](USER_GUIDE.md) for details.
+### Step 3: Paste Ideas
+
+```
+Today's thoughts:
+* AI weekly report automation saves 2 hours
+* Overseas client meetings need timezone confirmation
+* Why most people give up learning AI
+```
+
+AI will automatically: split → deduplicate → score → generate dashboard.
+
+### Step 4: View Dashboard
+
+Open `preview.html` to see your content dashboard.
+
+That's it! See [USER_GUIDE.md](USER_GUIDE.md) for details.
 
 ---
 
@@ -53,123 +68,6 @@ Creator OS is an **AI content assistant** that helps you:
 - **Multi-platform creators** — Managing X/Twitter, YouTube, Xiaohongshu, Bilibili, etc.
 - **Personal IP builders** — Want data-driven content decisions
 - **AI tool enthusiasts** — Want to boost creative efficiency with AI
-
----
-
-## Installation
-
-All options only require **cloning the repo** — no extra downloads or setup needed.
-
-### Option 1: Universal (Recommended)
-
-In any AI assistant, type:
-
-```
-Clone https://github.com/xiaxia94/creator-os and follow the instructions in AGENTS.md to help me manage my content ideas
-```
-
-The AI auto-loads `AGENTS.md` and starts working immediately. Works with Claude Code, Codex, Cursor, and any Agent-supporting tool.
-
-### Option 2: Claude Code
-
-In Claude Code, type:
-
-```
-Clone https://github.com/xiaxia94/creator-os and help me with my ideas: ...
-```
-
-Claude Code auto-loads `CLAUDE.md` and starts working immediately.
-
-### Option 3: Codex
-
-In Codex, type:
-
-```
-Clone https://github.com/xiaxia94/creator-os
-```
-
-Then say `/creator-os` or "use Creator OS". Codex auto-discovers the built-in Skill.
-
-### Option 4: Cursor
-
-In Cursor, type:
-
-```
-Clone https://github.com/xiaxia94/creator-os
-```
-
-Cursor auto-loads `.cursorrules` and starts working immediately.
-
----
-
-## Quick Start
-
-### First-time Setup (Only Once)
-
-Tell Creator OS who you are:
-
-```
-I'm an AI creator.
-Main platforms: Xiaohongshu and YouTube.
-Goal: Build personal influence.
-```
-
-Creator OS will remember your profile forever.
-
-### Daily Use
-
-Just paste your ideas to AI:
-
-```
-AI weekly report automation saved me 2 hours per week.
-Biggest mistake when meeting overseas clients: not confirming timezone.
-Why most people give up learning AI: no immediate ROI.
-```
-
-Or paste a full memo:
-
-```
-Today's thoughts:
-* AI weekly report automation
-* Overseas client meeting pitfalls
-* Why people give up on AI learning
-```
-
----
-
-## What AI Does Automatically
-
-✓ Split ideas into independent topics
-
-✓ Organize into different themes
-
-✓ Identify and merge duplicates
-
-✓ 4D scoring (Viral/Brand/Business/Competition)
-
-✓ Identify content series
-
-✓ Recommend what to publish next
-
-✓ Generate content dashboard
-
----
-
-## What You Get
-
-✓ Organized topic library
-
-✓ Content ecosystem analysis
-
-✓ Content series suggestions
-
-✓ Creator progress stats
-
-✓ AI content director suggestions
-
-✓ Top publishing recommendations
-
-✓ Visual content dashboard
 
 ---
 
