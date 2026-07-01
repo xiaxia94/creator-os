@@ -12,7 +12,7 @@ Creator OS is an AI-powered content management system. Just paste your ideas, an
 
 ### Get Started in 30 Seconds
 
-1. **Clone** → Tell your AI: `Clone https://github.com/xiaxia94/creator-os`
+1. **Clone** → Tell your AI: `Clone https://github.com/xiaxia94/creator-os and follow the instructions in AGENTS.md to help me manage my content ideas`
 2. **Tell AI who you are** → Say "I'm an AI creator, main platforms are Xiaohongshu and YouTube"
 3. **Paste ideas** → Share your thoughts, AI processes automatically
 4. **View dashboard** → Open `preview.html` to see results
@@ -46,7 +46,17 @@ Creator OS is an **AI content assistant** that helps you:
 
 All options only require **cloning the repo** — no extra downloads or setup needed.
 
-### Option 1: Claude Code (Recommended)
+### Option 1: Universal (Recommended)
+
+In any AI assistant, type:
+
+```
+Clone https://github.com/xiaxia94/creator-os and follow the instructions in AGENTS.md to help me manage my content ideas
+```
+
+The AI auto-loads `AGENTS.md` and starts working immediately. Works with Claude Code, Codex, Cursor, and any Agent-supporting tool.
+
+### Option 2: Claude Code
 
 In Claude Code, type:
 
@@ -56,7 +66,7 @@ Clone https://github.com/xiaxia94/creator-os and help me with my ideas: ...
 
 Claude Code auto-loads `CLAUDE.md` and starts working immediately.
 
-### Option 2: Codex
+### Option 3: Codex
 
 In Codex, type:
 
@@ -66,7 +76,7 @@ Clone https://github.com/xiaxia94/creator-os
 
 Then say `/creator-os` or "use Creator OS". Codex auto-discovers the built-in Skill.
 
-### Option 3: Cursor
+### Option 4: Cursor
 
 In Cursor, type:
 
@@ -75,14 +85,6 @@ Clone https://github.com/xiaxia94/creator-os
 ```
 
 Cursor auto-loads `.cursorrules` and starts working immediately.
-
-### Option 4: Other AI Assistants
-
-Any AI assistant that supports Skills/Agents:
-
-1. Clone the repo
-2. Load `skill.md` or adapter files from `adapters/` into your AI assistant
-3. Start using
 
 ---
 
@@ -254,8 +256,9 @@ Creator OS auto-detects a writable location for your data:
 
 ```
 creator-os/
-├── CLAUDE.md                 # Claude Code auto-loads (root)
-├── .cursorrules              # Cursor auto-loads (root)
+├── AGENTS.md                 # Universal entry — all AI tools auto-load
+├── CLAUDE.md                 # Claude Code specific
+├── .cursorrules              # Cursor auto-loads
 ├── .codex/skills/            # Codex native Skill (auto-discovered)
 │   └── creator-os/SKILL.md
 ├── core/
